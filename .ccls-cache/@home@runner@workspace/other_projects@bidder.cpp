@@ -6,15 +6,14 @@
 #include <map>
 using namespace std;
 
-void find_highest_bidder(const map<string, int>& bidding_record) //void takes dict as param
-    {
+void find_highest_bidder(const map<string, int>& bidding_record) {
     int highest_bid = 0;
     string winner;
 
     for (const auto& pair : bidding_record) {
-        if (pair.second > highest_bid) { //if d1.value is highest
-            highest_bid = pair.second; //highest bid is d1.value
-            winner = pair.first; //winner is d1.key
+        if (pair.second > highest_bid) {
+            highest_bid = pair.second;
+            winner = pair.first;
         }
     }
 
